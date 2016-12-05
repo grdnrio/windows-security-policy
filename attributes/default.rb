@@ -1,0 +1,51 @@
+# General security policy settings
+default['security_policy']['templates'] = 'C:/Windows/security/templates'
+default['security_policy']['databases'] = 'C:/Windows/security/databases'
+
+# Security policy rights / privileges settings. Based on  default system SIDs. 
+# Empty value means nothing will bee written to the security policy template.
+default['security_policy']['rights']['SeNetworkLogonRight'] = 
+default['security_policy']['rights']['SeBackupPrivilege'] = 
+default['security_policy']['rights']['SeChangeNotifyPrivilege'] = 
+default['security_policy']['rights']['SeSystemtimePrivilege'] = 
+default['security_policy']['rights']['SeCreatePagefilePrivilege'] = 
+default['security_policy']['rights']['SeDebugPrivilege'] =
+default['security_policy']['rights']['SeRemoteShutdownPrivilege'] =
+default['security_policy']['rights']['SeAuditPrivilege'] =
+default['security_policy']['rights']['SeIncreaseQuotaPrivilege'] =
+default['security_policy']['rights']['SeIncreaseBasePriorityPrivilege'] =
+default['security_policy']['rights']['SeLoadDriverPrivilege'] =
+default['security_policy']['rights']['SeBatchLogonRight'] =
+default['security_policy']['rights']['SeServiceLogonRight'] =
+default['security_policy']['rights']['SeInteractiveLogonRight'] =
+default['security_policy']['rights']['SeSecurityPrivilege'] =
+default['security_policy']['rights']['SeSystemEnvironmentPrivilege'] =
+default['security_policy']['rights']['SeProfileSingleProcessPrivilege'] =
+default['security_policy']['rights']['SeSystemProfilePrivilege'] =
+default['security_policy']['rights']['SeAssignPrimaryTokenPrivilege'] =
+default['security_policy']['rights']['SeRestorePrivilege'] =
+default['security_policy']['rights']['SeShutdownPrivilege'] =
+default['security_policy']['rights']['SeTakeOwnershipPrivilege'] =
+default['security_policy']['rights']['SeUndockPrivilege'] =
+default['security_policy']['rights']['SeManageVolumePrivilege'] =
+default['security_policy']['rights']['SeRemoteInteractiveLogonRight'] =
+default['security_policy']['rights']['SeImpersonatePrivilege'] =
+default['security_policy']['rights']['SeCreateGlobalPrivilege'] =
+default['security_policy']['rights']['SeIncreaseWorking'] =
+default['security_policy']['rights']['SeTimeZonePrivilege'] =
+default['security_policy']['rights']['SeCreateSymbolicLinkPrivilege'] =
+default['security_policy']['rights']['SeDenyNetworkLogonRight'] =
+default['security_policy']['rights']['SeDenyInteractiveLogonRight'] =
+default['security_policy']['rights']['SeDenyBatchLogonRight'] =
+default['security_policy']['rights']['SeDenyServiceLogonRight'] =
+default['security_policy']['rights']['SeTcbPrivilege'] =
+default['security_policy']['rights']['SeMachineAccountPrivilege'] =
+default['security_policy']['rights']['SeCreateTokenPrivilege'] =
+default['security_policy']['rights']['SeCreatePermanentPrivilege'] =
+default['security_policy']['rights']['SeEnableDelegationPrivilege'] =
+default['security_policy']['rights']['SeLockMemoryPrivilege'] =
+default['security_policy']['rights']['SeSyncAgentPrivilege'] =
+default['security_policy']['rights']['SeUnsolicitedInputPrivilege'] =
+default['security_policy']['rights']['SeTrustedCredManAccessPrivilege'] =
+default['security_policy']['rights']['SeRelabelPrivilege'] =
+default['security_policy']['rights']['SeDenyRemoteInteractiveLogonRight'] =
