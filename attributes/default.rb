@@ -2,8 +2,14 @@
 default['security_policy']['templates'] = 'C:/Windows/security/templates'
 default['security_policy']['databases'] = 'C:/Windows/security/databases'
 
-# Security policy rights / privileges settings. Based on  default system SIDs. 
-# Empty value means nothing will bee written to the security policy template.
+# System access settings
+# Nil value means nothing will be written to the security policy template.
+default['security_policy']['access']['LockoutBadCount'] = nil
+default['security_policy']['access']['ResetLockoutCount'] = nil
+default['security_policy']['access']['LockoutDuration'] = nil
+
+# Security policy rights / privileges settings. Based on  default system SIDs.
+# Nil value means nothing will be written to the security policy template.
 default['security_policy']['rights']['SeNetworkLogonRight']                 = nil
 default['security_policy']['rights']['SeBackupPrivilege']                   = nil
 default['security_policy']['rights']['SeChangeNotifyPrivilege']             = nil
