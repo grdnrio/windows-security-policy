@@ -1,6 +1,8 @@
 # General security policy settings
-default['security_policy']['templates'] = 'C:/Windows/security/templates'
-default['security_policy']['databases'] = 'C:/Windows/security/databases'
+default['security_policy']['template']['location'] = 'C:/Windows/security/templates'
+default['security_policy']['database']['location'] = 'C:/Windows/security/database'
+
+default['security_policy']['database']['name'] = 'chefpolicy.sdb'
 
 # System access settings
 # Nil value means nothing will be written to the security policy template.
