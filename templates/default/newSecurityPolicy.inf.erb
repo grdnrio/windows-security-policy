@@ -1,0 +1,20 @@
+[Unicode]
+Unicode=yes
+
+[Version]
+signature="$CHICAGO$"
+Revision=1
+
+[System Access]
+<% node['security_policy']['access'].each do |setting, value| %>
+    <% unless value.nil? -%>
+<%= setting %> = <%= value %>
+    <% end %>
+<% end %>
+
+[Privilege Rights]
+<% node['security_policy']['rights'].each do |setting, value| %>
+    <% unless value.nil? -%>
+<%= setting %> = <%= value %>
+    <% end %>
+<% end %>
