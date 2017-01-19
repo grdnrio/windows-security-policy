@@ -8,3 +8,4 @@
 # Please refer to the accompanying README for more information.
 #
 
+Chef::Log.warn('The windows-security-policy::default recipe contains no resources. Please remove from your runlist.')
