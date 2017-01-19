@@ -6,12 +6,12 @@ property :log_location, String, default: 'C:\Windows\security\logs\chef-secedit.
 
 action :configure do
   if node['platform'] == 'windows'
-    template "#{template_path}\#{template}" do
+    template '#{template}' do
       source 'policy.inf.erb'
       action :create
     end
 
-    execute 'Import security policy' do
+    execute 'Configure security database' do
       command "Secedit /configure /db #{database} /cfg #{template} /log #{log_location}"
       live_stream true
       action :run
@@ -23,6 +23,21 @@ action :export do
   if node['platform'] == 'windows'
     execute 'Export security database to inf file' do
       command "Secedit /export /db #{database} /cfg #{template} /log #{log_location}"
+      live_stream true
+      action :run
+    end
+  end
+end
+
+action :import do
+  if node['platform'] == 'windows'
+    template '#{template}' do
+      source 'policy.inf.erb'
+      action :create
+    end
+
+    execute 'Inport and create security database' do
+      command "Secedit /import /db #{database} /cfg #{template} /log #{log_location} /overwrite"
       live_stream true
       action :run
     end
