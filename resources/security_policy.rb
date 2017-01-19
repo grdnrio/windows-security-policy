@@ -36,7 +36,7 @@ action :import do
       action :create
     end
 
-    execute 'Inport and create security database' do
+    execute 'Import and create security database' do
       command "Secedit /import /db #{database} /cfg #{template} /log #{log_location} /overwrite"
       live_stream true
       action :run
