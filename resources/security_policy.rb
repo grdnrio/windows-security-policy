@@ -16,6 +16,8 @@ action :configure do
       live_stream true
       action :run
     end
+  else
+    Chef::Log.info "#{@current_resource} is only for a Windows platform"
   end
 end
 
@@ -26,6 +28,8 @@ action :export do
       live_stream true
       action :run
     end
+  else
+    Chef::Log.info "#{@current_resource} is only for a Windows platform"
   end
 end
 
@@ -41,5 +45,7 @@ action :import do
       live_stream true
       action :run
     end
+  else
+    Chef::Log.info "#{@current_resource} is only for a Windows platform"
   end
 end
