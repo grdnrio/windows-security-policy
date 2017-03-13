@@ -8,6 +8,7 @@ action :configure do
   if node['platform'] == 'windows'
     template '#{template}' do
       source 'policy.inf.erb'
+      cookbook "windows-security-policy"
       action :create
     end
 
