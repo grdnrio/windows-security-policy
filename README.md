@@ -15,6 +15,7 @@ Provides a helper security policy resource, and template with attributes for man
 ## Resources
 
 ### security_policy
+This resource makes use of the secedit.exe tool.
 
 #### Actions
 
@@ -48,7 +49,7 @@ The following recipes are available in this cookbook.
 Unused.
 
 ### template
-This recipe is used to create a template that can be used to configure a security database. All of the accepted settings are attributes in this cookbook.
+This recipe is used to create a template that can be imported using the security_policy resource to configure a security database. All of the accepted settings are attributes in this cookbook.
 
 
 
@@ -59,13 +60,16 @@ Place an explicit dependency on this cookbook (using depends in the cookbook's m
 ```ruby
 depends 'windows-security-policy'
 ```
+## To Do
+- Tests
+- Testing on other Windows platforms
 
 ## License & Authors
 
 - Author:: Joe Gardiner ([joe@chef.io](mailto:joe@chef.io))
+- Contributor:: Christoph Hartmann ([chartmann@chef.io](mailto:chartmann@chef.io))
 
 ```text
-Copyright 2011-2017, Chef Software, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
