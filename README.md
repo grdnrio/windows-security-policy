@@ -24,7 +24,7 @@ Provides a helper security policy resource, and template with attributes for man
 
 #### Properties
 
-- `template` - Path to the teamplate on the filesystem.
+- `policy_template` - Path to the template on the filesystem.
 - `database` - The security database (*.sdb) you wish to affect.
 - `log_location` - Location to write logs to.
 
@@ -34,7 +34,7 @@ Configure an existing security database.
 
 ```ruby
 security_policy 'Local Policy' do
-    template 'C:\Windows\security\templates\chefNewPolicy.inf'
+    policy_template 'C:\Windows\security\templates\chefNewPolicy.inf'
     database 'C:\Windows\security\database\chef.sdb'
     action :configure
 end
@@ -57,7 +57,7 @@ This recipe is used to create a template that can be used to configure a securit
 Place an explicit dependency on this cookbook (using depends in the cookbook's metadata.rb) from any cookbook where you would like to use the Windows-specific resources/providers that ship with this cookbook.
 
 ```ruby
-depends 'windows'
+depends 'windows-security-policy'
 ```
 
 ## License & Authors
