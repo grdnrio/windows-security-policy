@@ -20,3 +20,4 @@ Berksfile.lock
 .zero-knife.rb
 Policyfile.lock.json
 knife.rb
+syntaxcache
