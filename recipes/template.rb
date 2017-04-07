@@ -17,7 +17,7 @@
 # file. Change a setting from nil to the desired value or nothing
 # will be written. Refer to the README for more information.
 
-template "node['security_policy']['template']['location']/mySecurityPolicy.inf" do
+template "#{node['security_policy']['template']['location']}\\mySecurityPolicy.inf" do
   source 'policy.inf.erb'
   action :create
 end
