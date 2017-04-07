@@ -14,7 +14,7 @@
 #
 
 # This template is dynamically generated from the default attributes
-# file. Change a setting from nil to the desired value or nothing 
+# file. Change a setting from nil to the desired value or nothing
 # will be written. Refer to the README for more information.
 
 template "node['security_policy']['template']['location']/mySecurityPolicy.inf" do
