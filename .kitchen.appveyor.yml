@@ -8,7 +8,9 @@ driver:
   port: <%= ENV["winrm_port"] %>
 
 provisioner:
-  name: chef_zero
+  name: chef_solo
+#  client_rb:
+#    audit_mode: :enabled
 
 verifier:
   name: inspec
@@ -21,4 +23,7 @@ suites:
     run_list:
       - recipe[windows-security-policy::default]
       - recipe[windows-security-policy::template]
+#    verifier:
+#      inspec_tests:
+#        - path: test/integration/default/tests.rb
     attributes:
