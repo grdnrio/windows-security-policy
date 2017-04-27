@@ -8,7 +8,7 @@ driver:
   port: <%= ENV["winrm_port"] %>
 
 provisioner:
-  name: chef_zero
+  name: chef_solo
 
 verifier:
   name: inspec
@@ -20,4 +20,5 @@ suites:
   - name: default
     run_list:
       - recipe[windows-security-policy::default]
+      - recipe[windows-security-policy::template]
     attributes:
