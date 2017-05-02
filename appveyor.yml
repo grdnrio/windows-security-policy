@@ -21,8 +21,6 @@ branches:
   only:
     - master
 
-[Net.ServicePointManager]::SecurityProtocol = 'Ssl3, Tls, Tls11, Tls12'
-
 install:
   - systeminfo
   - winrm quickconfig -q
@@ -33,6 +31,7 @@ install:
   - ps: ruby --version
   - ps: gem --version
   - ps: gem install bundler --quiet --no-ri --no-rdoc
+  - ps: [Net.ServicePointManager]::SecurityProtocol = 'Ssl3, Tls, Tls11, Tls12'
   - ps: Invoke-WebRequest -Uri http://curl.haxx.se/ca/cacert.pem -OutFile c:\projects\windows-security-policy\certs.pem
   - ps: bundler --version
 
