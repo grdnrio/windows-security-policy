@@ -1,6 +1,6 @@
 # General security policy settings
-default['security_policy']['template']['location'] = 'C:/Windows/security/templates'
-default['security_policy']['database']['location'] = 'C:/Windows/security/database'
+default['security_policy']['template']['location'] = 'C:\Windows\security\templates'
+default['security_policy']['database']['location'] = 'C:\Windows\security\database'
 
 default['security_policy']['database']['name'] = 'chefpolicy.sdb'
 
