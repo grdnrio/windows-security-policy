@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/mt8mscxucota8ywf/branch/master?svg=true)](https://ci.appveyor.com/project/grdnrio/windows-security-policy/branch/master)
+
 # Windows Security Policy Helper Cookbook
 
 Provides a helper security policy resource, and template with attributes for managing your Windows local security and security databases.
