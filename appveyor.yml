@@ -13,7 +13,7 @@ environment:
   SSL_CERT_FILE: c:\projects\windows-security-policy\certs.pem
 
   matrix:
-    - ruby_version: "22"
+    - ruby_version: "23"
 
 clone_folder: c:\projects\windows-security-policy
 clone_depth: 1
