@@ -9,4 +9,4 @@ supports 'windows'
 issues_url 'https://github.com/grdnrio/windows-security-policy/issues' if respond_to?(:issues_url)
 source_url 'https://github.com/grdnrio/windows-security-policy' if respond_to?(:source_url)
 
-chef_version '~> 12'
+chef_version '>= 12'
