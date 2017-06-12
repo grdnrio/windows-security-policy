@@ -1,4 +1,11 @@
 ## Windows Security Policy
+v0.3.7 (2017-06-12)
+--------------------------------
+- Added default action to custom resource
+- Fixing unnecessary string interpolation
+- Added standard license format to metadata
+
+
 v0.3.6 (Unreleased)
 --------------------------------
 - Fix path in template and database location attributes [\#20](https://github.com/grdnrio/windows-security-policy/pull/20)
