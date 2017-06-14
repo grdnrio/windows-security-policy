@@ -8,7 +8,7 @@ property :log_location, String, default: 'C:\Windows\security\logs\chef-secedit.
 
 action :configure do
   if node['platform'] == 'windows'
-    template '#{policy_template}' do
+    template "#{policy_template}" do
       source 'policy.inf.erb'
       cookbook 'windows-security-policy'
       action :create
@@ -38,7 +38,7 @@ end
 
 action :import do
   if node['platform'] == 'windows'
-    template '#{template}' do
+    template "#{template}" do
       source 'policy.inf.erb'
       action :create
     end
