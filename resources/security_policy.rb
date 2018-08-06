@@ -44,7 +44,7 @@ action :import do
     end
 
     execute 'Import and create security database' do
-      command "Secedit /import /db #{new_resource.database} /cfg #{new_resource.policy_template} /log #{new_resource.new_resource.log_location} /overwrite"
+      command "Secedit /import /db #{new_resource.database} /cfg #{new_resource.policy_template} /log #{new_resource.log_location} /overwrite"
       live_stream true
       action :run
     end
