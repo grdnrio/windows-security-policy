@@ -1,16 +1,18 @@
 ## Windows Security Policy
 
+v0.3.9 (2018-06-01)
+--------------------------------
+- fixed typo in :import [\#28](https://github.com/grdnrio/windows-security-policy/pull/28)
+
 v0.3.8 (2018-06-01)
 --------------------------------
 - Fixed security_policy property calls
-
 
 v0.3.7 (2017-06-12)
 --------------------------------
 - Added default action to custom resource
 - Fixing unnecessary string interpolation
 - Added standard license format to metadata
-
 
 v0.3.6 (Unreleased)
 --------------------------------
