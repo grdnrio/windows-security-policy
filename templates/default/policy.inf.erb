@@ -22,6 +22,6 @@ Revision=1
 [Registry Values]
 <% node['security_policy']['values'].each do |setting, value| %>
     <% unless value.nil? -%>
-<%= setting %> = <%= value %>
+<%= setting %>=<%= value %>
     <% end %>
 <% end %>
