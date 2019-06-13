@@ -61,7 +61,7 @@ action :rollback do
       action :create
     end
 
-    execute 'Import and create security database' do
+    execute 'Generate rollback template' do
       command "Secedit /generaterollback /cfg #{new_resource.policy_template} /rbk #{new_resource.rollback_template} /log #{new_resource.log_location} /overwrite"
       live_stream true
       action :run
