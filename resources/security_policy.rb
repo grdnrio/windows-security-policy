@@ -62,7 +62,7 @@ action :rollback do
     end
 
     execute 'Generate rollback template' do
-      command "Secedit /generaterollback /cfg #{new_resource.policy_template} /rbk #{new_resource.rollback_template} /log #{new_resource.log_location} /overwrite"
+      command "Secedit /generaterollback /cfg #{new_resource.policy_template} /rbk #{new_resource.rollback_template} /log #{new_resource.log_location} /quiet"
       live_stream true
       action :run
     end
