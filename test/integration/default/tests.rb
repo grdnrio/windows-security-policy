@@ -7,5 +7,5 @@
 
 describe file('C:\Windows\security\templates\mySecurityPolicy.inf') do
   it { should exist }
-  its('content') { should include '[System Access]'}
+  its('content') { should include '[System Access]' }
 end

@@ -41,6 +41,7 @@ action :import do
   if node['platform'] == 'windows'
     template new_resource.policy_template do
       source 'policy.inf.erb'
+      cookbook 'windows-security-policy'
       action :create
     end
 
@@ -58,6 +59,7 @@ action :rollback do
   if node['platform'] == 'windows'
     template new_resource.policy_template do
       source 'policy.inf.erb'
+      cookbook 'windows-security-policy'
       action :create
     end
 
