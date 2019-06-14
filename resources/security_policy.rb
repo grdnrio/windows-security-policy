@@ -16,7 +16,7 @@ action :configure do
     end
 
     execute 'Configure security database' do
-      command "Secedit /configure /db #{new_resource.database} /cfg #{new_resource.policy_template} /log #{new_resource.log_location}"
+      command "Secedit /configure /db #{new_resource.database} /cfg #{new_resource.policy_template} /log #{new_resource.log_location} /quiet"
       live_stream true
       action :run
     end
@@ -28,7 +28,7 @@ end
 action :export do
   if node['platform'] == 'windows'
     execute 'Export security database to inf file' do
-      command "Secedit /export /db #{new_resource.database} /cfg #{new_resource.policy_template} /log #{new_resource.log_location}"
+      command "Secedit /export /db #{new_resource.database} /cfg #{new_resource.policy_template} /log #{new_resource.log_location} /quiet"
       live_stream true
       action :run
     end
@@ -46,7 +46,7 @@ action :import do
     end
 
     execute 'Import and create security database' do
-      command "Secedit /import /db #{new_resource.database} /cfg #{new_resource.policy_template} /log #{new_resource.log_location} /overwrite"
+      command "Secedit /import /db #{new_resource.database} /cfg #{new_resource.policy_template} /log #{new_resource.log_location} /overwrite /quiet"
       live_stream true
       action :run
     end
