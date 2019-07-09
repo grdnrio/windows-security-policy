@@ -24,12 +24,14 @@ This resource makes use of the secedit.exe tool.
 - `:configure` - Applies configuration from a template to an existing SDB.
 - `:export` - Exports SDB settings to the local filesystem.
 - `:import` - Imports from a template into an SDB- can create a new SDB in the process.
+- `:rollback` - Create a rollback template for a configuration file.
 
 #### Properties
 
 - `policy_template` - Path to the template on the filesystem.
 - `database` - The security database (*.sdb) you wish to affect.
 - `log_location` - Location to write logs to.
+- `rollback_template` - Path to generate the rollback template.
 
 #### Examples
 
