@@ -1,5 +1,10 @@
 ## Windows Security Policy
 
+v0.3.10 (2019-07-09)
+--------------------------------
+- Add rollback action
+- Add [Registry Values] to template
+
 v0.3.9 (2018-06-01)
 --------------------------------
 - fixed typo in :import [\#28](https://github.com/grdnrio/windows-security-policy/pull/28)
